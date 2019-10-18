@@ -1,0 +1,6 @@
+compile.on.save=true
+<<<<<<< HEAD
+user.properties.file=/Users/raoyuhuizi/Library/Application Support/NetBeans/8.0.2/build.properties
+=======
+user.properties.file=/Users/peichun/Library/Application Support/NetBeans/8.0.2/build.properties
+>>>>>>> c373a5388af67fc391e57a4fe93b5fabab4c2af2
