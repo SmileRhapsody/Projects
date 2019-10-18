@@ -1,0 +1,72 @@
+package neu.edu.csye6200.team.objects;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Rules {
+	private int minAge;
+	private int maxAge;
+	private String ageRange;
+	private String groupSize;
+	private String Ratio;
+	private String maxGroup;
+	
+	public void Add(int minage, int maxage, String groupsize, String ratio, String maxgroup) {
+		this.minAge = minage;
+		this.maxAge = maxage;
+		this.groupSize = groupsize;
+		this.Ratio = ratio;
+		this.maxGroup = maxgroup;
+	}
+
+	public int getMinAge() {
+		return minAge;
+	}
+
+	public void setMinAge(int minAge) {
+		this.minAge = minAge;
+	}
+
+	public int getMaxAge() {
+		return maxAge;
+	}
+
+	public void setMaxAge(int maxAge) {
+		this.maxAge = maxAge;
+	}
+
+	public String getAgeRange() {
+		return ageRange;
+	}
+
+	public void setAgeRange(String ageRange) {
+		this.ageRange = ageRange;
+	}
+
+	public String getGroupSize() {
+		return groupSize;
+	}
+
+	public void setGroupSize(String groupSize) {
+		this.groupSize = groupSize;
+	}
+
+	public String getRatio() {
+		return Ratio;
+	}
+
+	public void setRatio(String ratio) {
+		Ratio = ratio;
+	}
+
+	public String getMaxGroup() {
+		return maxGroup;
+	}
+
+	public void setMaxGroup(String maxGroup) {
+		this.maxGroup = maxGroup;
+	}
+	
+	
+	
+}

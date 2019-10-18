@@ -1,0 +1,83 @@
+package neu.edu.csye6200.team.objects;
+
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
+public class Rules {
+	
+	private final IntegerProperty minAge;
+	private final IntegerProperty maxAge;
+	private final StringProperty ageRange;
+	private final IntegerProperty groupSize;
+	private final StringProperty ratio;
+	private final IntegerProperty maxGroup;
+	
+	public Rules(Integer minage, Integer maxage, Integer groupsize, String ratio, Integer maxgroup) {
+		this.minAge = new SimpleIntegerProperty(minage);
+		this.maxAge = new SimpleIntegerProperty(maxage);
+		this.groupSize = new SimpleIntegerProperty(groupsize);
+		this.ratio = new SimpleStringProperty(ratio);
+		this.maxGroup = new SimpleIntegerProperty(maxgroup);
+		this.ageRange = new SimpleStringProperty(minage + "¡ª¡ª" + maxage);
+	}
+	
+	public Rules(Integer minage, String maxage, Integer groupsize, String ratio, Integer maxgroup) {
+		this.minAge = new SimpleIntegerProperty(minage);
+		this.maxAge = new SimpleIntegerProperty(Integer.MAX_VALUE);
+		this.groupSize = new SimpleIntegerProperty(groupsize);
+		this.ratio = new SimpleStringProperty(ratio);
+		this.maxGroup = new SimpleIntegerProperty(maxgroup);
+		this.ageRange = new SimpleStringProperty(minage + maxage);
+	}
+	
+	public Integer getMinAge() {
+        return minAge.get();
+    }
+
+	public IntegerProperty minAgeProperty() {
+        return minAge;
+    }
+	
+	public Integer getMaxAge() {
+        return maxAge.get();
+    }
+
+	public IntegerProperty maxAgeProperty() {
+        return maxAge;
+    }
+	
+	public Integer getGroupSize() {
+        return groupSize.get();
+    }
+
+	public IntegerProperty groupSizeProperty() {
+        return groupSize;
+    }
+	
+	public Integer getMaxGroup() {
+        return maxGroup.get();
+    }
+
+	public IntegerProperty maxGroupProperty() {
+        return maxGroup;
+    }
+	
+	public String getAgeRange() {
+        return ageRange.get();
+    }
+
+	public StringProperty ageRangeProperty() {
+        return ageRange;
+    }
+	
+	public String getRatio() {
+        return ratio.get();
+    }
+
+	public StringProperty RatioProperty() {
+        return ratio;
+    }
+	
+}

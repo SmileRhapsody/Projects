@@ -1,0 +1,15 @@
+package test;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Q005_Longest_Palindromic_Substring {
+    public String longestPalindrome(String s) {
+        String s1 ="";
+        for(int i=s.length()-1;i>=0;i--){
+            s1+=s.charAt(i);
+        }
+        Map<Integer, int[]> map = new HashMap<>();	
+        map.put(1, new int[] {1,2});
+    }	
+}

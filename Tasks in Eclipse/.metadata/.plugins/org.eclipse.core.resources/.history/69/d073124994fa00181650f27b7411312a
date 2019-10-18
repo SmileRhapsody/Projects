@@ -1,0 +1,13 @@
+
+public class Interface extends father{
+	public void run() {
+		if (new String() instanceof Comparable) {
+			System.out.println("String is Comparable!");
+			}
+		String name = "Dan";
+		if (name instanceof Comparable) {
+		System.out.println(name + " is Comparable!");
+		}
+
+	}
+}

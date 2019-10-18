@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Enter Amount</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function enterInfo() {	
+		var amount = document.getElementById("number");
+		var count = parseInt(amount.value);
+                document.write("<html>");
+                document.write("<head>");
+                document.write("<title>Book Information</title>");
+                document.write("</head>");
+                document.write("<body>");
+                document.write("<form action='part5' method='get'>");
+                document.write("<table border=1>");
+                document.write("<tr/><th/>ISBN<th/>Book Title<th/>Authors<th/>Price");
+		for(var i=0; i<count;i++){
+                    document.write("<tr/><td/><input type='text' name='isbn"+i+"'>");
+                    document.write("<td/><input type='text' name='title"+i+"'>");
+                    document.write("<td/><input type='text' name='authors"+i+"'>");
+                    document.write("<td/><input type='text' name='price"+i+"'>");
+		}
+                document.write("</table><br/>");
+		document.write("<input type='submit' value='Add Books'>");
+                document.write("<input type='hidden' name='amount' value='"+count+"'>");
+                document.write("</form>");
+                document.write("</body>");
+                document.write("</html>");
+            }
+        </script>
+    </head>
+    <body>
+        <div><h1>How many books do you want?</h1></div><br/>
+        <input type="text" id="number"><br/><br/>
+        <input type="submit" value="Submit" onclick="enterInfo()">
+    </body>
+</html>

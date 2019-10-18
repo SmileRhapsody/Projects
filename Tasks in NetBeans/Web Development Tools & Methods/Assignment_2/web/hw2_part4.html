@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Entry</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript">
+            function selectEntry(){
+                var option = document.getElementById("selection");
+                if(option.value == "Browse Movies"){
+                    window.location.href("hw2_part4_browse.html");
+                }
+                if(option.value == "Add New Movies to Database"){
+                    window.location.href("hw2_part4_add.html");
+                }
+            }
+        </script>
+        <div>Welcome to Our Movie Store</div><br/>
+        <div>Please Make Your Selection Below</div><br/>
+        <select name="selection" id="selection">
+            <option value="Browse Movies">Browse Movies</option>
+            <option value="Add New Movies to Database">Add New Movies to Database</option>
+        </select>
+        <button type="button" onclick="selectEntry()">Send</button>
+    </body>
+</html>
+

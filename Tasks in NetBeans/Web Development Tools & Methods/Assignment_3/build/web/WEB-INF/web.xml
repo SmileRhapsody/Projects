@@ -1,0 +1,66 @@
+<web-app>
+    <servlet>
+        <servlet-name>part5</servlet-name>
+        <servlet-class>Servlet.Part5</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>part6</servlet-name>
+        <servlet-class>Servlet.Part6</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>part7_transfer</servlet-name>
+        <servlet-class>Servlet.Part7_Transfer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>part7</servlet-name>
+        <servlet-class>Servlet.Part7</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>part5</servlet-name>
+        <url-pattern>/part5</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>part6</servlet-name>
+        <url-pattern>/part6</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>part7_transfer</servlet-name>
+        <url-pattern>/transfer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>part7</servlet-name>
+        <url-pattern>/part7</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>
+               SecuredMovieSite
+            </web-resource-name>
+            <url-pattern>/transfer</url-pattern>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>
+            Only managers use this app
+            </description>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-role>
+       <role-name>admin</role-name>
+    </security-role>
+    <login-config>
+      <auth-method>FORM</auth-method>
+      <form-login-config>
+        <form-login-page>/part7_login.jsp</form-login-page>
+        <form-error-page>/part7_error.jsp</form-error-page>
+      </form-login-config>
+    </login-config>
+    
+    
+</web-app>

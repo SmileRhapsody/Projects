@@ -1,0 +1,13 @@
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Driver{
+
+	public static void main(String[] args) {
+		TestLamda t = new TestLamda();
+		t.run1();
+
+	}
+
+}

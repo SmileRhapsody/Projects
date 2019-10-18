@@ -1,0 +1,35 @@
+package Quiz;
+
+public class qwe  {
+    public qwe() {
+        super();
+    }
+
+    public void explode() {
+        System.out.println("(POW)");
+    }
+    
+    public double getMetric() {
+        return 376.5;    // muzzle velocity meter/second
+    }
+    
+    public String getMetricDescription() {
+        StringBuilder description = new StringBuilder();
+        description.append("A Gun Shot having a Muzzle Velocity of ");
+        description.append(this.getMetric());
+        description.append(" meters/second.");
+        return description.toString();
+    }
+    
+    public String toString() {
+        return "GunShot []";
+    }
+
+    public static void demo() {
+       /* Explosion explosion = new Explosion(); // explosion object
+*/        GunShot gunShot = new GunShot(); // GunShot object
+gunShot.explode();
+
+   }
+
+}

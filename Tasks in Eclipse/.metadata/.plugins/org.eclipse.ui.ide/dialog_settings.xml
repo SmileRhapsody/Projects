@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="E:\eclipse-workspace\Test"/>
+		<item value="E:\eclipse-workspace\DayCare"/>
+		<item value="E:\workspace_o2_Xiaoge_Zhang_SOLIDex1\Assignment_01"/>
+		<item value="E:\eclipse-workspace\Project3"/>
+		<item value="E:\eclipse-workspace\Project2"/>
+		<item value="E:\eclipse-workspace\Project4"/>
+		<item value="E:\eclipse-workspace\Mypro01"/>
+		<item value="E:\eclipse-workspace\DayCareProject-master"/>
+		<item value="E:\eclipse-workspace"/>
+		<item value="E:\eclipse-workspace\Project1"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\eclipse-workspace\Project04"/>
+			<item value="E:\eclipse-workspace"/>
+			<item value="E:\eclipse-workspace\Project1"/>
+			<item value="E:\eclipse-workspace\midterm"/>
+			<item value="E:\01 NEU\Concept of Object-Oriented Design\Midterm\workspace_xiaoge_zhang_photon_midterm\WalmartProject"/>
+			<item value="E:\eclipse-workspace\Test"/>
+			<item value="E:\eclipse-workspace\Project03"/>
+			<item value="C:\Users\Administrator\git\DayCareProject"/>
+			<item value="E:\eclipse-workspace\Quiztest"/>
+			<item value="E:\eclipse-workspace\Project02"/>
+			<item value="E:\eclipse-workspace\Project06"/>
+			<item value="C:\Users\Administrator\Desktop\Daycare Project\DayCareProject"/>
+			<item value="E:\eclipse-workspace\DayCareProject"/>
+			<item value="C:\Users\Administrator\Desktop\DayCare Projects\DayCareProject"/>
+			<item value="D:\Backup\Downloads\Daycare Project\DayCareProject"/>
+			<item value="D:\Backup\Downloads\DayCareProject-master"/>
+			<item value="E:\eclipse-workspace\DayCareProject-Jimmy_Work"/>
+			<item value="D:\Backup\Downloads\DayCareProject-Jimmy_Work"/>
+			<item value="E:\eclipse-workspace\JavaFXTest"/>
+			<item value="C:\Users\Administrator\git\DayCareProject-Jimmy_Work"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

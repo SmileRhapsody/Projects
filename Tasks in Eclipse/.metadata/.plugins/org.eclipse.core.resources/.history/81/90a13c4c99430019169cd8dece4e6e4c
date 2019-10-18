@@ -1,0 +1,11 @@
+package test;
+
+public class test1 {
+	public void show(String s) {
+		char[] chars = s.toCharArray();
+		char[] newchar = new char[chars.length];
+		for(char c:chars) {
+			
+		}
+	}
+}

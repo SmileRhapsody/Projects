@@ -1,0 +1,69 @@
+package neu.edu.csye6200.team.objects;
+
+
+public class Rules {
+	private int minAge;
+	private int maxAge;
+	private String ageRange;
+	private int groupSize;
+	private String Ratio;
+	private int maxGroup;
+	
+	public Rules(int minage, int maxage, int groupsize, String ratio, int maxgroup) {
+		this.minAge = minage;
+		this.maxAge = maxage;
+		this.groupSize = groupsize;
+		this.Ratio = ratio;
+		this.maxGroup = maxgroup;
+		this.ageRange = minage + "¡ª¡ª" + maxage;
+	}
+
+	public int getMinAge() {
+		return minAge;
+	}
+
+	public void setMinAge(int minAge) {
+		this.minAge = minAge;
+	}
+
+	public int getMaxAge() {
+		return maxAge;
+	}
+
+	public void setMaxAge(int maxAge) {
+		this.maxAge = maxAge;
+	}
+
+	public String getAgeRange() {
+		return ageRange;
+	}
+
+	public void setAgeRange(String ageRange) {
+		this.ageRange = ageRange;
+	}
+
+	public String getRatio() {
+		return Ratio;
+	}
+
+	public void setRatio(String ratio) {
+		Ratio = ratio;
+	}
+
+	public int getGroupSize() {
+		return groupSize;
+	}
+
+	public void setGroupSize(int groupSize) {
+		this.groupSize = groupSize;
+	}
+
+	public int getMaxGroup() {
+		return maxGroup;
+	}
+
+	public void setMaxGroup(int maxGroup) {
+		this.maxGroup = maxGroup;
+	}
+	
+}

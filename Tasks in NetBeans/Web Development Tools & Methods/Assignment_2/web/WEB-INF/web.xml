@@ -1,0 +1,55 @@
+<web-app>
+    <servlet>
+        <servlet-name>part1</servlet-name>
+        <servlet-class>Business.part1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>part1_cart</servlet-name>
+        <servlet-class>Business.part1_cart</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>part2</servlet-name>
+        <servlet-class>Business.part2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>part3</servlet-name>
+        <servlet-class>Business.part3</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>part4</servlet-name>
+        <servlet-class>Business.part4</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>part5</servlet-name>
+        <servlet-class>Business.part5</servlet-class>
+    </servlet>
+	
+    <servlet-mapping>
+        <servlet-name>part1</servlet-name>
+        <url-pattern>/part1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>part1_cart</servlet-name>
+        <url-pattern>/part1_cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>part2</servlet-name>
+        <url-pattern>/part2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>part3</servlet-name>
+        <url-pattern>/part3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>part4</servlet-name>
+        <url-pattern>/part4</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>part5</servlet-name>
+        <url-pattern>/part5</url-pattern>
+    </servlet-mapping>
+	
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="pojo.Customer" table="customer">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name"/>
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password"/>
+        </property>
+        <set name="orders" cascade="all">
+            <key column="customerId"/>
+            <one-to-many class="pojo.Order"/>
+        </set>
+    </class>
+    
+    <class name="pojo.Order" table="customerorder">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <property name="salesName" type="java.lang.String">
+            <column name="salesName"/>
+        </property>
+        <property name="supplierName" type="java.lang.String">
+            <column name="supplierName"/>
+        </property>
+        <property name="productName" type="java.lang.String">
+            <column name="productName"/>
+        </property>
+        <property name="buyingPrice" type="java.lang.Double">
+            <column name="buyingPrice"/>
+        </property>
+        <property name="salingPrice" type="java.lang.Double">
+            <column name="salingPrice"/>
+        </property>
+        <property name="count" type="java.lang.Integer">
+            <column name="count"/>
+        </property>
+    </class>
+</hibernate-mapping>

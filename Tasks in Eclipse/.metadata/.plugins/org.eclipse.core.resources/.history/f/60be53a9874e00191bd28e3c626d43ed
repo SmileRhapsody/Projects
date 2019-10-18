@@ -1,0 +1,13 @@
+package test;
+
+import java.util.*;
+
+public class test1 {
+	public void show(int x) {
+		String s=Integer.toString(x);
+		System.out.println(s);
+		System.out.println(Integer.parseInt(s));
+		
+	}
+	
+}

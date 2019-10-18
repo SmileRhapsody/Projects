@@ -1,0 +1,31 @@
+package neu.edu.csye6200.team.view;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+public class RegulationRulesController {
+
+
+
+    private Stage dialogStage;
+
+    /**
+     * Initializes the controller class. This method is automatically called
+     * after the fxml file has been loaded.
+     */
+    @FXML
+    private void initialize() {
+    }
+
+
+    public void setDialogStage(Stage dialogStage) {
+        this.dialogStage = dialogStage;
+    }
+    
+    @FXML
+    private void handleCancel() {
+        dialogStage.close();
+    }
+
+}

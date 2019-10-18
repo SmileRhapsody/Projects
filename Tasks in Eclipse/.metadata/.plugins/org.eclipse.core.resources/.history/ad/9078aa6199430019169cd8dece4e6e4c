@@ -1,0 +1,12 @@
+package test;
+
+public class driver {
+	public static void main(String[] args) {
+		
+		int a = 107;
+		a= a/10;
+		System.out.println(a);
+		test1 t1 = new test1();
+		t1.show("pwwkew");
+	}
+}

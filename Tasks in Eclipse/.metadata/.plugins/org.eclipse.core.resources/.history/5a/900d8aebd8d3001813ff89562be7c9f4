@@ -1,0 +1,55 @@
+package neu.edu.csye6200.team.view;
+import java.util.ArrayList;
+import java.util.List;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.stage.Stage;
+import neu.edu.csye6200.Main;
+import neu.edu.csye6200.team.objects.Rules;
+/**
+ * Dialog to edit details of a person.
+ * 
+ * @author Marco Jakob
+ */
+public class RegulationRulesController {
+
+	@FXML
+    private TableColumn<Rules, String> ageColumn;
+    @FXML
+    private TableColumn<Rules, String> groupSizeColumn;
+    @FXML
+    private TableColumn<Rules, String> ratioColumn;
+    @FXML
+    private TableColumn<Rules, String> maxGroupColumn;
+
+    private Stage dialogStage;
+
+    
+    @FXML
+    private void initialize() {
+    	
+    	ageColumn.setCellValueFactory(
+                cellData -> cellData.getValue().ageRangeProperty());
+    	
+    	groupSizeColumn.setCellValueFactory(
+                cellData -> cellData.getValue().groupSizeProperty());
+    	
+    	ratioColumn.setCellValueFactory(
+                cellData -> cellData.getValue().RatioProperty());
+    	
+    	maxGroupColumn.setCellValueFactory(
+                cellData -> cellData.getValue().maxGroupProperty());
+    	
+    }
+
+
+    public void setDialogStage(Stage dialogStage) {
+        this.dialogStage = dialogStage;
+    }
+
+    @FXML
+    private void handleCancel() {
+        dialogStage.close();
+    }
+
+}

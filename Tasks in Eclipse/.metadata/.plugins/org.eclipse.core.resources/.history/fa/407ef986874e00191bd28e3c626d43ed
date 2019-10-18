@@ -1,0 +1,11 @@
+package test;
+
+import java.util.*;
+
+public class test1 {
+	public void show(int s) {
+		char[] chars = s.toCharArray();
+		System.out.println(chars[1:2]);
+	}
+	
+}

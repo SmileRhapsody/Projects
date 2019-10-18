@@ -1,0 +1,22 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Regex {
+	public void run() {
+	    String userName = "q123";
+	    String regExName = "^[A-Za-z]([A-Za-z0-9_$+]+)?$";
+	    Pattern pattern = Pattern.compile(regExName);
+	    // 忽略大小写的写法
+	    // Pattern pat = Pattern.compile(regEx, Pattern.CASE_INSENSITIVE);
+	    Matcher matcher = pattern.matcher(userName);
+	    boolean rs = matcher.matches();
+	    System.out.println(rs);
+	    
+	    
+	    String password = "andy_xg@adf.com";
+	    String regExwWord = "^[a-zA-Z]{1,}[0-9_]{0,}@([a-zA-z0-9]{1,}\\.){1,3}[a-zA-z]{1,}$";
+	    Matcher matcher1 = Pattern.compile(regExwWord).matcher(password);
+	    System.out.println(matcher1.matches());
+	    
+	}
+}

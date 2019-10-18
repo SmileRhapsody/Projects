@@ -1,0 +1,16 @@
+package test;
+
+import java.util.*;
+
+public class Q771_Jewels_and_Stones {
+	public int numJewelsInStones(String J, String S) {
+
+        List<Character> sList = new ArrayList<>(S.toCharArray());
+        int count = 0;
+        for(char c : sList){
+            if(jList.contains(c))
+                count++;
+        }
+        return count;
+    }
+}

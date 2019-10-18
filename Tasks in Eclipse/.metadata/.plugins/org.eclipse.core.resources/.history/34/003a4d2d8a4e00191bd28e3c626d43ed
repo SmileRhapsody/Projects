@@ -1,0 +1,16 @@
+package test;
+
+import java.util.*;
+
+import javax.lang.model.element.Element;
+
+public class test1 {
+	public void show(int x) {
+		String s=Integer.toString(x);
+		String[] ss = {"12","23"};
+		List<String> l = Arrays.asList(ss);
+		Collections.reverse(l);
+		System.out.println(l);
+	}
+	
+}

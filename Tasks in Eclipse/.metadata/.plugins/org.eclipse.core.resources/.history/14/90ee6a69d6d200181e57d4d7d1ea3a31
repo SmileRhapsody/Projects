@@ -1,0 +1,198 @@
+
+public class qwe {
+
+}
+
+package UserInterface;
+
+import Business.Users.Admin;
+import Business.Users.Customer;
+import Business.Users.Supplier;
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.ButtonGroup;
+
+private JPanel panelRight;
+private Admin admin;
+public AdminCreateScreen(JPanel panelRight, Admin admin) {
+    initComponents();
+    this.panelRight = panelRight;
+    this.admin = admin;
+
+    CheckForButtonVisibility();
+
+    initialize();
+
+}
+
+private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    // TODO add your handling code here:
+    if(!userNamePatternCorrect()){
+        return;
+    }
+    if(!passwordPatternCorrect()){
+
+        //JOptionPane.showMessageDialog(this,"Password must contain alphanumeric values and @ $ and & only");
+        return;
+    }
+    if(!userNamePatternCorrect()){
+        //JOptionPane.showMessageDialog(this,"userName must contain \"_\" and \"@\" but should not start with an \"_\" ");
+
+        return;
+    }
+    if(!txtPword.getText().equals(txtRePword.getText())){
+        JOptionPane.showMessageDialog(this,"Password Don't Match");
+        return;
+    }
+    if(btnGroup.isSelected(radioCustomer.getModel())){
+        Customer customer = new Customer(new Date(),txtPword.getText(), txtUser.getText());
+        admin.getCustDir().getCustomerList().add(customer);
+        JOptionPane.showMessageDialog(this,"customer created successfully");
+        
+    }
+    
+    else if(btnGroup.isSelected(radioSupplier.getModel())){
+        Supplier supplier = new Supplier(txtPword.getText(), txtUser.getText());
+        admin.getSuppDir().getSupplierList().add(supplier);
+        JOptionPane.showMessageDialog(this,"supplier created successfully");
+        
+    }
+    else{
+        JOptionPane.showMessageDialog(this,"Please select customer or supplier");
+    }
+}
+
+
+public void checkForButtonVisiblity(){
+    if(!txtUser.getText().isEmpty() && !txtPword.getText().isEmpty() && !txtRePword.getText().isEmpty()){
+    btnCreate.setEnabled(true);
+    }
+    else{
+            btnCreate.setEnabled(false);
+            }
+}
+
+private void initialize(){
+    checkForButtonVisiblity();
+}
+
+
+private boolean passwordPatternCorrect(){
+
+    Pattern p = Pattern.compile("^[A-Za-z0-9+_$]+$");
+    Matcher m = p.matcher(txtPword.getText());
+    Pattern p1 = Pattern.compile(".*[+_$].*");
+    Matcher m1 = p1.matcher(txtPword.getText());
+    Pattern p2 = Pattern.compile(".*[A-Za-z0-9].*");
+    Matcher m2 = p2.matcher(txtPword.getText());
+    boolean b = m.matches();
+    boolean b1 = m1.matches();
+    boolean b2 = m2.matches();
+    
+    if(b == true){
+        if(b1 == true){
+            if (b2 == true){
+                return true;
+            }else{
+                JOptionPane.showMessageDialog(this,"Password must contain alphanumeric values");
+                return false;
+            }
+        }else{
+            JOptionPane.showMessageDialog(this,"Password must contain + _ or $");
+            return false;
+        }
+    }else{
+        JOptionPane.showMessageDialog(this,"Password must contain alphanumeric values and + _ or $ only");
+         return false;           
+    }
+}
+
+private boolean userNamePatternCorrect(){
+    Pattern p = Pattern.compile("^[a-zA-Z0-9_]+@([a-zA-z0-9]{1,}\\.){1,}[a-zA-z]{1,}$");
+    Matcher m = p.matcher(txtUser.getText());
+    boolean b = m.matches();
+    Pattern p1 = Pattern.compile("^[_][a-zA-Z0-9_]+@([a-zA-z0-9]{1,}\\.){1,}[a-zA-z]{1,}$");
+    Matcher m1 = p1.matcher(txtUser.getText());
+    boolean b1 = m1.matches();
+    if(b == true){
+        if (b1 == false){
+            return true;
+        }else{
+            JOptionPane.showMessageDialog(this,"Username should not start with a _");
+            return false;
+        }
+    }else{
+        JOptionPane.showMessageDialog(this,"Username should be a valid email-ID with _ and @ as the only allowed special characters");
+        return false;
+    }  
+}
+
+
+private void backAction() {
+    panelRight.remove(this);
+    Component[] componentArray = panelRight.getComponents();
+    Component component = componentArray[componentArray.length - 1];
+    AdminMainScreen AMC = (AdminMainScreen) component;
+    AMC.populate();
+    AMC.populate1();
+    CardLayout layout = (CardLayout) panelRight.getLayout();
+    layout.previous(panelRight);
+}
+
+
+private void txtRePwordKeyTyped(java.awt.event.KeyEvent evt) {                                    
+    // TODO add your handling code here:
+    checkForButtonVisiblity();
+    String check = ""+evt.getKeyChar();
+    String compare =txtRePword.getText();
+
+    if(!check.isEmpty()){
+        compare += check;
+    }
+    if(txtPword.getText().equals(compare)){
+        txtRePword.setBackground(Color.white);
+        btnCreate.setEnabled(true);
+    }else{
+        txtRePword.setBackground(Color.red);
+        btnCreate.setEnabled(false);
+    }
+
+}                                   
+
+private void CheckForButtonVisibility(){
+    if(!txtUser.getText().isEmpty() && !txtPword.getText().isEmpty() && !txtRePword.getText().isEmpty()){
+        btnCreate.setEnabled(true);
+    }else{
+        btnCreate.setEnabled(false);
+    }
+}
+
+    checkForButtonVisiblity();
+}                                   
+
+private void txtUserKeyTyped(java.awt.event.KeyEvent evt) {                                 
+    // TODO add your handling code here:
+    checkForButtonVisiblity();
+}                                
+
+private void txtPwordKeyTyped(java.awt.event.KeyEvent evt) {                                  
+    // TODO add your handling code here:
+    checkForButtonVisiblity();
+}
+
+
+
+
+
+
+

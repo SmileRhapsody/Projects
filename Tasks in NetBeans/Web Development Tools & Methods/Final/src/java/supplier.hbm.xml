@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="pojo.Supplier" table="supplier">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <property name="supplierName" type="java.lang.String">
+            <column name="supplierName"/>
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password"/>
+        </property>
+        <set name="products" cascade="all">
+            <key column="supplierId"/>
+            <one-to-many class="pojo.SupplierProduct"/>
+        </set>
+    </class>
+    
+    <class name="pojo.SupplierProduct" table="supplierproduct">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name"/>
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="price"/>
+        </property>
+        <property name="count" type="java.lang.Integer">
+            <column name="count"/>
+        </property>
+    </class>
+</hibernate-mapping>
